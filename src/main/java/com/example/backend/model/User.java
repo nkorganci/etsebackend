@@ -1,10 +1,15 @@
 package com.example.backend.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -30,7 +35,8 @@ public class User {
 	@Column(name="email")
 	private String email;
 	@Column(name="password")
-	private String password;
+	private String password;	
+	
 	public long getId() {
 		return id;
 	}
